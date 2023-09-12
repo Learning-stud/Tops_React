@@ -71,44 +71,44 @@
  ],
  "order":[ {
   "id": 1,
-  "order-no": "23451",
+  "orderNo": "23451",
   "username": "Jay",
-  "coffee-type": "Expresso",
+  "coffeeType": "Expresso",
   "price": "500Rs"
  },
  {
   "id": 2,
-  "order-no": "23451",
+  "orderNo": "23451",
   "username": "devanshu",
-  "coffee-type": "late",
+  "coffeeType": "late",
   "price": "300Rs"
  },
  {
   "id": 3,
-  "order-no": "23451",
+  "orderNo": "23451",
   "username": "teerth",
-  "coffee-type": "mocha",
+  "coffeeType": "mocha",
   "price": "1000Rs"
  },
  {
   "id": 4,
-  "order-no": "23451",
+  "orderNo": "23451",
   "username": "krutarth",
-  "coffee-type": "Hot Coffee",
+  "coffeeType": "Hot Coffee",
   "price": "3000Rs"
  },
  {
   "id": 5,
-  "order-no": "23451",
+  "orderNo": "23451",
   "username": "Rudra",
-  "coffee-type": "Cold  Coffee",
+  "coffeeType": "Cold  Coffee",
   "price": "200Rs"
  },
  {
   "id": 6,
-  "order-no": "23451",
+  "orderNo": "23451",
   "username": "Tanmay",
-  "coffee-type": "Mocha",
+  "coffeeType": "Mocha",
   "price": "1500Rs"
  }
  ] 

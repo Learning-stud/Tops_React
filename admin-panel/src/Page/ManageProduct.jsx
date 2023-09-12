@@ -41,10 +41,10 @@ function ManageProduct() {
                                         <thead>
                                             <tr>
                                                 <th style={{ width: '5%' }}>#</th>
-                                                <th style={{ width: '20%' }}>First Name</th>
-                                                <th style={{ width: '20%' }}>Last Name</th>
-                                                <th style={{ width: '20%' }}>Username</th>
-                                                <th style={{ width: '15%' }}>Edit</th>
+                                                <th style={{ width: '10%' }}>Product Name</th>
+                                                <th style={{ width: '10%' }}>Product Type</th>
+                                                <th style={{ width: '5%' }}>Price</th>
+                                                <th style={{ width: '10%' }}>Edit</th>
                                             </tr>
                                         </thead>
                                         <tbody>

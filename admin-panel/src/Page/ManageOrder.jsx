@@ -11,6 +11,12 @@ function ManageOrder() {
         // console.log(result)
 
     }
+
+    const onchange = async (id) => {
+        await axios.delete(`http://localhost:3000/order/${id}`);
+        fetch();
+        alert("thai gayu")
+    }
     return (
         <div>
             <div className="container">
@@ -31,32 +37,32 @@ function ManageOrder() {
                                     <table className="table table-striped table-bordered table-hover">
                                         <thead>
                                             <tr>
-                                                <th style={{ width: '5%' }}>#</th>
-                                                <th style={{ width: '20%' }}>First Name</th>
-                                                <th style={{ width: '20%' }}>Last Name</th>
-                                                <th style={{ width: '20%' }}>Username</th>
-                                                <th style={{ width: '15%' }}>Edit</th>
+                                                <th style={{ width: '5%' }}   >#</th>
+                                                <th style={{ width: '20%' }}>Order No</th>
+                                                <th style={{ width: '20%' }}>Customer Name</th>
+                                                <th style={{ width: '20%' }}>Coffee Type</th>
+                                                <th style={{ width: '15%' }}>price</th>
                                             </tr>
                                         </thead>
                                         <tbody>
-                                            {data.map((user)=>{
-                                                const {id,orderNo, username, coffeeType, price}=user;
+                                            {data.map((user) => {
+                                                const { id, orderNo, username, coffeeType, price } = user;
                                                 return (
                                                     <tr>
-                                                    <td>{id}</td>
-                                                    <td>{orderNo}</td>
-                                                    <td>{username}</td>
-                                                    <td>{coffeeType}</td>
-                                                    <td>{price}</td>
-                                                    <td>
-                                                        <button type="submit" className="btn btn-info" style={{ marginRight: '5px' }}>Apply</button>
-                                                        <button type="submit" className="btn btn-danger">Delete</button>
-                                                    </td>
-                                                </tr>
+                                                        <td>{id}</td>
+                                                        <td>{orderNo}</td>
+                                                        <td className="bg-red-400 ">{username}</td>
+                                                        <td>{coffeeType}</td>
+                                                        <td>{price}</td>
+                                                        <td>
+                                                            <button type="submit" className="btn btn-info" style={{ marginRight: '5px' }}>Apply</button>
+                                                            <button type="submit" className="btn btn-danger" onClick={() => onchange(id)} >Delete</button>
+                                                        </td>
+                                                    </tr>
 
-                                                    
-                                            );
-                                                })}
+
+                                                );
+                                            })}
                                         </tbody>
                                     </table>
                                 </div>
