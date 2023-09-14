@@ -26,7 +26,10 @@ function Header() {
             <NavLink className="nav-link" to="/Service">Services</NavLink>
           </li>
           <li className="nav-item">
-            <NavLink className="nav-link" to="/Contact">Contact Us</NavLink>
+            <NavLink className="nav-link" to="/SignUp">Sign Up</NavLink>
+          </li>
+          <li className="nav-item">
+            <NavLink className="nav-link" to="/Login">login</NavLink>
           </li>
           <li className="nav-item">
             <NavLink className="nav-link" to="#"><i className="fa fa-search" aria-hidden="true" /></NavLink>

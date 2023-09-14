@@ -1,115 +1,120 @@
 {
- "user": [
-  {
-   "id": 1,
-   "name": "jay",
-   "email": "jay@gmail.com",
-   "phone": "125487"
-  },
-  {
-   "id": 2,
-   "name": "devanshu",
-   "email": "devanshu@gmail.com",
-   "phone": "125487"
-  },
-  {
-   "id": 3,
-   "name": "neel",
-   "email": "neel@gmail.com",
-   "phone": "125487"
-  },
-  {
-   "id": 4,
-   "name": "parth",
-   "email": "parth@gmail.com",
-   "phone": "125487"
-  },
-  {
-   "id": 5,
-   "name": "tirth",
-   "email": "tirth@gmail.com",
-   "phone": "125487"
-  }
- ],
- "product": [
-  {
-   "id": 1,
-   "name": "expresso",
-   "type": "sweet",
-   "price": 500
-  },
-  {
-   "id": 2,
-   "name": "latte",
-   "type": "sweet",
-   "price": 500
-  },
-  {
-   "id": 3,
-   "name": "Hot Coffee",
-   "type": "sweet",
-   "price": 500
-  },
-  {
-   "id": 4,
-   "name": "Cold Coffee",
-   "type": "sweet",
-   "price": 500
-  },
-  {
-   "id": 5,
-   "name": "Americano",
-   "type": "sweet",
-   "price": 500
-  },
-  {
-   "id": 6,
-   "name": "Mocha",
-   "type": "sweet",
-   "price": 500
-  }
- ],
- "order":[ {
-  "id": 1,
-  "orderNo": "23451",
-  "username": "Jay",
-  "coffeeType": "Expresso",
-  "price": "500Rs"
- },
- {
-  "id": 2,
-  "orderNo": "23451",
-  "username": "devanshu",
-  "coffeeType": "late",
-  "price": "300Rs"
- },
- {
-  "id": 3,
-  "orderNo": "23451",
-  "username": "teerth",
-  "coffeeType": "mocha",
-  "price": "1000Rs"
- },
- {
-  "id": 4,
-  "orderNo": "23451",
-  "username": "krutarth",
-  "coffeeType": "Hot Coffee",
-  "price": "3000Rs"
- },
- {
-  "id": 5,
-  "orderNo": "23451",
-  "username": "Rudra",
-  "coffeeType": "Cold  Coffee",
-  "price": "200Rs"
- },
- {
-  "id": 6,
-  "orderNo": "23451",
-  "username": "Tanmay",
-  "coffeeType": "Mocha",
-  "price": "1500Rs"
- }
- ] 
+  "user": [
+    {
+      "id": 1,
+      "name": "jay",
+      "email": "jay@gmail.com",
+      "phone": "125487"
+    },
+    {
+      "id": 2,
+      "name": "devanshu",
+      "email": "devanshu@gmail.com",
+      "phone": "125487"
+    },
+    {
+      "id": 3,
+      "name": "neel",
+      "email": "neel@gmail.com",
+      "phone": "125487"
+    },
+    {
+      "id": 4,
+      "name": "parth",
+      "email": "parth@gmail.com",
+      "phone": "125487"
+    },
+    {
+      "id": 5,
+      "name": "tirth",
+      "email": "tirth@gmail.com",
+      "phone": "125487"
+    }
+  ],
+  "product": [
+    {
+      "id": 3,
+      "name": "Hot Coffee",
+      "type": "sweet",
+      "price": 500
+    },
+    {
+      "id": 4,
+      "name": "Cold Coffee",
+      "type": "sweet",
+      "price": 500
+    },
+    {
+      "id": 5,
+      "name": "Americano",
+      "type": "sweet",
+      "price": 500
+    },
+    {
+      "id": 6,
+      "name": "Mocha",
+      "type": "sweet",
+      "price": 500
+    }
+  ],
+  "order": [
+    {
+      "id": 1,
+      "orderNo": "23451",
+      "username": "Jay",
+      "coffeeType": "Expresso",
+      "price": "500Rs"
+    },
+    {
+      "id": 2,
+      "orderNo": "23451",
+      "username": "devanshu",
+      "coffeeType": "late",
+      "price": "300Rs"
+    },
+    {
+      "id": 3,
+      "orderNo": "23451",
+      "username": "teerth",
+      "coffeeType": "mocha",
+      "price": "1000Rs"
+    },
+    {
+      "id": 4,
+      "orderNo": "23451",
+      "username": "krutarth",
+      "coffeeType": "Hot Coffee",
+      "price": "3000Rs"
+    },
+    {
+      "id": 5,
+      "orderNo": "23451",
+      "username": "Rudra",
+      "coffeeType": "Cold  Coffee",
+      "price": "200Rs"
+    },
+    {
+      "id": 6,
+      "orderNo": "23451",
+      "username": "Tanmay",
+      "coffeeType": "Mocha",
+      "price": "1500Rs"
+    }
+  ],
+  "usertable": [
+    {
+      "name": "jdhkajsfhiasj",
+      "email": "cashfqh",
+      "phoneNo": "12534215634132",
+      "password": "jdvfhgWUO",
+      "id": "1694687754609"
+    },
+    {
+      "name": "bsetjrsyjkrsu",
+      "email": "rtjsrtjsrtkrd6",
+      "phoneNo": "34524616626",
+      "password": "serhqerhqeh",
+      "id": "1694688153715"
+    }
+  ]
 }

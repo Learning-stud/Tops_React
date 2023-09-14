@@ -12,6 +12,7 @@ import AddBlog from './Page/AddBlog';
 import ManageUser from './Page/ManageUser';
 import ManageOrder from './Page/ManageOrder';
 import ManageProduct from './Page/ManageProduct';
+import UserTable from './Page/UserTable';
 import { ToastContainer } from 'react-toastify';
 
 
@@ -31,6 +32,7 @@ function App() {
         <Route path="/manageuser" element={<><Header /> <ManageUser /> </>}></Route>
         <Route path="/ManageOrder" element={<><Header /> <ManageOrder /></>}></Route>
         <Route path="/ManageProduct" element={<><Header /> <ManageProduct /></>}></Route>
+        <Route path="/UserTable" element={<><Header /> <UserTable /></>}></Route>
       </Routes>
     </BrowserRouter>
   )
