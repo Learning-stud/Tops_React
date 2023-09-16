@@ -33,12 +33,6 @@
   ],
   "product": [
     {
-      "id": 3,
-      "name": "Hot Coffee",
-      "type": "sweet",
-      "price": 500
-    },
-    {
       "id": 4,
       "name": "Cold Coffee",
       "type": "sweet",
@@ -58,13 +52,6 @@
     }
   ],
   "order": [
-    {
-      "id": 1,
-      "orderNo": "23451",
-      "username": "Jay",
-      "coffeeType": "Expresso",
-      "price": "500Rs"
-    },
     {
       "id": 2,
       "orderNo": "23451",
@@ -101,20 +88,5 @@
       "price": "1500Rs"
     }
   ],
-  "usertable": [
-    {
-      "name": "jdhkajsfhiasj",
-      "email": "cashfqh",
-      "phoneNo": "12534215634132",
-      "password": "jdvfhgWUO",
-      "id": "1694687754609"
-    },
-    {
-      "name": "bsetjrsyjkrsu",
-      "email": "rtjsrtjsrtkrd6",
-      "phoneNo": "34524616626",
-      "password": "serhqerhqeh",
-      "id": "1694688153715"
-    }
-  ]
+  "usertable": []
 }
