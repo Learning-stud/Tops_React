@@ -10,17 +10,17 @@ export default function UserProfile() {
     password: '',
   });
 
-  const [userData, setUserData] = useState(null); // State to store user data fetched using GET
+  const [userData, setUserData] = useState(null); 
 
   useEffect(() => {
-    // Fetch user data when the component mounts
+ 
     getUserData();
   }, []);
 
   const getUserData = async () => {
     try {
       const response = await axios.get(`http://localhost:3000/usertable`);
-      setUserData(response.data); // Assuming the response contains user data
+      setUserData(response.data); 
     } catch (error) {
       console.error('Error fetching user data:', error);
     }
@@ -38,7 +38,7 @@ export default function UserProfile() {
         if (result.status === 201) {
           toast.success('Profile Updated Successfully');
           setFormvalue({ ...formvalue, name: '', email: '', phoneNo: '', password: '' });
-          getUserData(); // Refresh user data after updating
+          getUserData(); 
         }
       } catch (error) {
         console.error('Error updating profile:', error);
@@ -69,17 +69,7 @@ export default function UserProfile() {
 
   return (
     <div>
-      {/* Render user data (GET) */}
-      {userData && (
-        <div>
-          <h1>User Profile</h1>
-          <p>Name: {userData.name}</p>
-          <p>Email: {userData.email}</p>
-          <p>Phone Number: {userData.phoneNo}</p>
-        </div>
-      )}
-
-      {/* Update user profile form (POST) */}
+      
       <div className="mail_section">
         <div className="email_text">
           <form onSubmit={handleUpdateProfile}>
@@ -124,7 +114,7 @@ export default function UserProfile() {
               />
             </div>
 
-            <div className="send_btn">
+            <div className="send_btn w-25 rounded  ">
               <button type="submit" className="main_bt">
                 Edit
               </button>

@@ -1,12 +1,6 @@
 {
   "user": [
     {
-      "id": 1,
-      "name": "jay",
-      "email": "jay@gmail.com",
-      "phone": "125487"
-    },
-    {
       "id": 2,
       "name": "devanshu",
       "email": "devanshu@gmail.com",
@@ -88,14 +82,27 @@
       "price": "1500Rs"
     },
     {
-       "id":7,
-       "orderNo":"23452",
-       "username": "janmay",
+      "id": 7,
+      "orderNo": "23452",
+      "username": "janmay",
       "coffeeType": "Mocha",
       "price": "1500Rs"
     }
   ],
   "usertable": [
-    
+    {
+      "name": "jay",
+      "email": "gajjar@123",
+      "phoneNo": "4567891234",
+      "password": "546546231",
+      "id": 1
+    },
+    {
+      "name": "kay ",
+      "email": "jayahalpara123456@gmail.com",
+      "phoneNo": "43252352525",
+      "password": "jhfkgfuy",
+      "id": 2
+    }
   ]
 }
