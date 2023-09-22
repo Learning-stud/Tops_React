@@ -9,6 +9,7 @@ import OurGallery from './gg/OurGallery';
 import { ToastContainer } from 'react-toastify';
 import "react-toastify/dist/ReactToastify.css"
 import Login from './gg/login';
+import UserProfile from './gg/UserProfile';
 function App() {
   return (
     <BrowserRouter>
@@ -20,6 +21,7 @@ function App() {
         <Route path='/Service' element={<> <Header /> <Service/> <Fotter /> </>} ></Route>
         <Route path='/SignUp' element={<> <Header /> <SignUp/> <Fotter /> </>} ></Route>
         <Route path='/Login' element={<> <Header /> <Login/> <Fotter /> </>} ></Route>
+        <Route path='/UserProfile' element={<> <Header /> <UserProfile/> <Fotter /> </>} ></Route>
       </Routes>
 
     </BrowserRouter>
