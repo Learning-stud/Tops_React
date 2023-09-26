@@ -4,9 +4,7 @@ import { toast } from 'react-toastify'
 export default function SignUp() {
 
   const [formvalue, setFormvalue] = useState({
-    name: "",
     email: "",
-    phoneNo: "",
     password: ""
 
   });
