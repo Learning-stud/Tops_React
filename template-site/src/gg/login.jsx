@@ -1,9 +1,12 @@
 import React, { useState } from 'react'
 import axios from 'axios'
 import { toast } from 'react-toastify'
+import { Link, redirect, useNavigate } from 'react-router-dom'
 export default function SignUp() {
+  const redirect = useNavigate();
 
   const [formvalue, setFormvalue] = useState({
+
     email: "",
     password: ""
 
@@ -11,24 +14,18 @@ export default function SignUp() {
 
 
   const onchange = (e) => {
-    setFormvalue({ ...formvalue, id: new Date().getTime().toString(), [e.target.name]: e.target.value });
+    setFormvalue({ ...formvalue, [e.target.name]: e.target.value });
     console.log(formvalue)
   }
   function validation() {
 
     var result = true;
-    if (formvalue.name == "") {
-      toast.error('Name Field is required !');
-      result = false;
-    }
+
     if (formvalue.email == "") {
       toast.error('Email Field is required !');
       result = false;
     }
-    if (formvalue.phoneNo == "") {
-      toast.error('Phone No Field is required !');
-      result = false;
-    }
+
     if (formvalue.password == "") {
       toast.error('Password Field is required !');
       result = false;
@@ -36,13 +33,25 @@ export default function SignUp() {
     return result;
   }
 
-  const onsubmit = async (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
     if (validation()) {
-      const result = await axios.post(`http://localhost:3000/usertable`, formvalue);
-      if (result.status = 201) {
-        toast.success('Inquiry  Subbmitted Success');
-        setFormvalue({ ...formvalue, name: "", email: "", phoneNo: "", password: "" });
+      const result = await axios.get(`http://localhost:3000/usertable?email=${formvalue.email}`);
+      console.log(result)
+      if (result.data.length > 0) {
+        if (result.data[0].password == formvalue.password) {
+          localStorage.setItem('username', result.data[0].name);
+          localStorage.setItem('userid', result.data[0].id);
+
+          toast.success('Login Success !');
+          redirect('/')
+        }
+        else {
+          toast.error('Login nai thai jato re !');
+        }
+
+      } else {
+        toast.error('Login nai thai jato re !');
       }
     }
   }
@@ -60,29 +69,23 @@ export default function SignUp() {
               <div className="mail_section">
                 <div className="email_text">
                   <div className="form-group">
-                    <input type="text" value={formvalue.name} onChange={onchange} name="name" className="email-bt" placeholder="Name" />
                   </div>
                   <div className="form-group">
                     <input type="email" value={formvalue.email} onChange={onchange} name="email" className="email-bt" placeholder="Email" />
                   </div>
                   <div className="form-group">
-                    <input type="number" value={formvalue.phoneNo} onChange={onchange} name="phoneNo" className="email-bt" placeholder="Phone Numbar" />
                   </div>
                   <div className="form-group">
                     <input type="password" value={formvalue.password} onChange={onchange} name="password" className="email-bt" placeholder=" password" />
                   </div>
 
                   <div className="send_btn">
-                    <div type="text" onClick={onsubmit} className="main_bt"><a href="#">SEND</a></div>
+                    <button type="submit" className="btn btn-info" onClick={handleSubmit}>Login</button>
                   </div>
                 </div>
               </div>
             </div>
-            <div className="col-md-6 padding_0">
-              <div className="map-responsive">
-                <iframe src="https://www.google.com/maps/embed/v1/place?key=AIzaSyA0s1a7phLN0iaD6-UE7m4qP-z21pH0eSc&q=Eiffel+Tower+Paris+France" width={600} height={508} frameBorder={0} style={{ border: 0, width: '100%' }} allowFullScreen />
-              </div>
-            </div>
+
           </div>
         </div>
       </div>

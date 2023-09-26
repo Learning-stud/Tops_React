@@ -72,9 +72,7 @@ function Header() {
                                 <li>
                                     <NavLink to="/Manageproduct"><i class="fa fa-send "></i>Manage Product</NavLink>
                                 </li>
-                                <li>
-                                    <NavLink to="/UserTable"><i class="fa fa-send "></i>User Table</NavLink>
-                                </li>
+                               
                             </ul>
                         </li>
                     </ul>

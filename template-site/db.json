@@ -1,30 +1,5 @@
 {
-  "user": [
-    {
-      "id": 2,
-      "name": "devanshu",
-      "email": "devanshu@gmail.com",
-      "phone": "125487"
-    },
-    {
-      "id": 3,
-      "name": "neel",
-      "email": "neel@gmail.com",
-      "phone": "125487"
-    },
-    {
-      "id": 4,
-      "name": "parth",
-      "email": "parth@gmail.com",
-      "phone": "125487"
-    },
-    {
-      "id": 5,
-      "name": "tirth",
-      "email": "tirth@gmail.com",
-      "phone": "125487"
-    }
-  ],
+  "user": [],
   "product": [
     {
       "id": 4,
@@ -92,31 +67,52 @@
   "usertable": [
     {
       "name": "jay",
-      "email": "gajjar@123",
-      "phoneNo": "4567891234",
-      "password": "546546231",
-      "id": 1
-    },
-    {
-      "name": "kay ",
-      "email": "jayahalpara123456@gmail.com",
-      "phoneNo": "43252352525",
-      "password": "jhfkgfuy",
-      "id": 2
-    },
-    {
-      "name": "hgdaSFHKQWYTF",
-      "email": "jay@gmail.com",
-      "phoneNo": "17573826",
-      "password": "546545465",
-      "id": 3
-    },
-    {
-      "name": "frdgjeat",
       "email": "jay@gmail.com",
       "phoneNo": "17573826063",
-      "password": "rt123",
-      "id": "1695712850550"
+      "password": "12345",
+      "id": "1695718604667"
+    },
+    {
+      "id": "LYToWmn"
+    },
+    {
+      "id": "9iuP9Yd"
+    },
+    {
+      "id": "xdOKTg7"
+    },
+    {
+      "id": "WQl4kFH"
+    },
+    {
+      "id": "gYp_Cmk"
+    },
+    {
+      "id": "Z7zzgQ3"
+    },
+    {
+      "id": "VgVNr6b"
+    },
+    {
+      "id": "LpmXrKS"
+    },
+    {
+      "id": "g7mzjVP"
+    },
+    {
+      "id": "bAUp6sA"
+    },
+    {
+      "id": "p5Hzuhd"
+    },
+    {
+      "id": "QcItFqD"
+    },
+    {
+      "id": "krw5akH"
+    },
+    {
+      "id": "xV2j8Ug"
     }
   ]
 }
