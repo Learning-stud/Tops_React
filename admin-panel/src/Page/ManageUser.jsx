@@ -1,7 +1,10 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
-
+import { toast } from 'react-toastify'
+import {useNavigate} from 'react-router-dom'
 function ManageUser() {
+
+    const redirect = useNavigate();
     useEffect(() => {
         fetchUsers();
     }, []);
@@ -22,7 +25,7 @@ function ManageUser() {
     const onchange = async (id) => {
         await axios.delete(`http://localhost:3000/usertable/${id}`);
         fetchUsers();
-        alert("thai gayu");
+        toast.success("thai gayu");
 
         // console.log(result)
 
@@ -32,7 +35,9 @@ function ManageUser() {
             await axios.put(`http://localhost:3000/usertable/${editingUser.id}`, editingUser);
             fetchUsers();
             setIsEditing(false);
-            alert("User data updated!");
+            toast.success("User data updated!");
+            return redirect('/Dashboard');
+
         } catch (error) {
             console.error("Error updating user data:", error);
         }

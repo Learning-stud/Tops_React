@@ -13,6 +13,7 @@ import ManageOrder from './Page/ManageOrder';
 import ManageProduct from './Page/ManageProduct';
 import ManageUser from './Page/ManageUser';
 import { ToastContainer } from 'react-toastify';
+import "react-toastify/dist/ReactToastify.css"
 
 
 function App() {
