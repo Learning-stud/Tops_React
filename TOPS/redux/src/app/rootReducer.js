@@ -1,6 +1,7 @@
 import { combineReducers } from "redux";
 import userReducer from "../features/userReducer";
-import contactReducer from '../features/contactReducer'
+import contactReducer from "../features/contactReducer";
+
 const rootReducer=combineReducers({
 
     userReducer:userReducer,

@@ -6,9 +6,12 @@ import Manage_data from "./features/website/pages/Manage_data";
 import Add_data from "./features/website/pages/Add_data";
 import Contact from "./features/website/pages/Contact";
 
+
+
 function App() {
   return (
     <BrowserRouter>
+     
       <Routes>
           <Route path="/" index element={<><Header/><Dashboard/><Footer/></>}></Route>
           <Route path="/add_data"  element={<><Header/><Add_data/><Footer/></>}></Route>

@@ -1,8 +1,22 @@
-import React from 'react'
+import React, { useEffect } from 'react'
+
+import { useSelector,useDispatch } from 'react-redux'
+import { userfetch,deletedata } from '../../userReducer'
 
 function Manage_data() {
 
+    const dispatch=useDispatch();
+    useEffect(()=>{
+        dispatch(userfetch());
+    },[]);
+
+    const {alluser}=useSelector((state)=>state.userReducer);
    
+    const deletehandel=(id)=>{
+        dispatch(deletedata(`http://localhost:3000/user/${id}`));
+        dispatch(userfetch());
+        
+    }
 
     return (
         <div>
@@ -19,13 +33,29 @@ function Manage_data() {
                                                 <th>id</th>
                                                 <th> Name</th>
                                                 <th> Email</th>
+                                                <th> Password</th>
                                                 <th> Mobile</th>
-
                                                 <th>Action</th>
                                             </tr>
                                         </thead>
                                         <tbody>
-                                          
+                                          {
+                                            alluser.map((value)=>{
+                                                return(
+                                                    <tr>
+                                                        <th>{value.id}</th>
+                                                        <th>{value.name}</th>
+                                                        <th>{value.email}</th>
+                                                        <th>{value.password}</th>
+                                                        <th>{value.mobile}</th>
+                                                        <th>
+                                                            <button className='btn btn-danger' onClick={()=>deletehandel(value.id)}>Delete</button>
+                                                            <button className='btn btn-primary'>Edit</button>
+                                                        </th>
+                                                    </tr>
+                                                )
+                                            })
+                                          }
                                         </tbody>
                                     </table>
                                 </div>{/* /content-panel */}
