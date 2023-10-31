@@ -21,13 +21,11 @@ function Add_data() {
   const submithandel = (e) => {
     e.preventDefault();
 
-    // Basic validation
     if (!formvalue.name || !formvalue.email || !formvalue.password || !formvalue.mobile) {
       toast.error('Please fill in all required fields.');
       return;
     }
 
-    // Additional email format validation
     if (!/^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/.test(formvalue.email)) {
       toast.error('Invalid email format.');
       return;
