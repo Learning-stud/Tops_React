@@ -1,49 +1,46 @@
-import React, { useEffect,useState } from 'react'
+import React, { useEffect ,useState} from 'react'
 
 import { useSelector, useDispatch } from 'react-redux'
-import { userfetch, deletedata , usersinglefetch,updatedata} from '../../userReducer'
+import { deletedata, updatedata } from '../../userReducer'
+import { fetchcontact, fetchsinglecontact } from '../../contactReducer'
 
-function Manage_data() {
+function Manage_contact() {
 
     const dispatch = useDispatch();
     useEffect(() => {
-        dispatch(userfetch());
+        dispatch(fetchcontact());
     }, []);
 
-    const { alluser,singleuser } = useSelector((state) => state.userReducer);
+    const { allcontact, singlecontact } = useSelector((state) => state.contactReducer);
 
-    const deletehandel = (id) => {
-        dispatch(deletedata(`http://localhost:3000/user/${id}`));
-        dispatch(userfetch());
-
-    }
-
-    const [formvalue,setFormvalue]=useState({
-        id:"",
-        name:"",
-        email:"",
-        password:"",
-        mobile:""
+    const [formvalue, setFormvalue] = useState({
+        id: "",
+        name: "",
+        email: "",
+        message: "",
     })
 
-    const edithandel=(id)=>{
-        dispatch(usersinglefetch(id))
-        setFormvalue(singleuser);
+    const edithandel = (id) => {
+        dispatch(fetchsinglecontact(id))
+        setFormvalue(singlecontact);
+    }
+ 
+    const changehandel = (e) => {
+        setFormvalue({ ...formvalue, [e.target.name]: e.target.value });
     }
 
-    const changehandel=(e)=>{
-        setFormvalue({...formvalue,[e.target.name]:e.target.value});
-    }
-
-    const submithandel=(e)=>{
+    const submithandel = (e) => {
         e.preventDefault();
-        dispatch(updatedata(`http://localhost:3000/user/${formvalue.id}`,formvalue));
-        dispatch(userfetch());
+        dispatch(updatedata(`http://localhost:3000/contact/${formvalue.id}`, formvalue));
+        dispatch(fetchcontact());
     }
 
 
+    const deletehandel = (id) => {
+        dispatch(deletedata(`http://localhost:3000/contact/${id}`));
+        dispatch(fetchcontact());
 
-
+    }
 
     return (
         <div>
@@ -60,24 +57,22 @@ function Manage_data() {
                                                 <th>id</th>
                                                 <th> Name</th>
                                                 <th> Email</th>
-                                                <th> Password</th>
-                                                <th> Mobile</th>
+                                                <th> Message</th>
                                                 <th>Action</th>
                                             </tr>
                                         </thead>
                                         <tbody>
                                             {
-                                                alluser.map((value) => {
+                                                allcontact.map((value) => {
                                                     return (
                                                         <tr>
                                                             <th>{value.id}</th>
                                                             <th>{value.name}</th>
                                                             <th>{value.email}</th>
-                                                            <th>{value.password}</th>
-                                                            <th>{value.mobile}</th>
+                                                            <th>{value.message}</th>
                                                             <th>
                                                                 <button className='btn btn-danger' onClick={() => deletehandel(value.id)}>Delete</button>
-                                                                <button className='btn btn-primary' onClick={() => edithandel(value.id)}  data-bs-toggle="modal" data-bs-target="#myModal">Edit</button>
+                                                                <button className='btn btn-primary' onClick={() => edithandel(value.id)} data-bs-toggle="modal" data-bs-target="#myModal">Edit</button>
                                                             </th>
                                                         </tr>
                                                     )
@@ -108,15 +103,12 @@ function Manage_data() {
                                                                     <input type="email" value={formvalue.email} onChange={changehandel} className="form-control" id="email" placeholder="Enter email" name="email" />
                                                                 </div>
                                                                 <div className="mb-3">
-                                                                    <label htmlFor="pwd">Password:</label>
-                                                                    <input type="password" value={formvalue.password} onChange={changehandel} className="form-control" id="pwd" placeholder="Enter password" name="password" />
+                                                                    <label htmlFor="pwd">Message:</label>
+                                                                    <textarea value={formvalue.message} onChange={changehandel} className="form-control"  name="message" ></textarea>
                                                                 </div>
-                                                                <div className="mb-3">
-                                                                    <label htmlFor="pwd">Mobile:</label>
-                                                                    <input type="number" value={formvalue.mobile} onChange={changehandel} className="form-control" id="Mobile" placeholder="Enter Mobile" name="mobile" />
-                                                                </div>
+                                                                
 
-                                                                <button type="submit" onClick={submithandel} data-bs-dismiss="modal" className="btn btn-primary">Submit</button>
+                                                                <button type="submit" onClick={submithandel} data-bs-dismiss="modal" className="btn btn-primary">Save</button>
                                                             </form>
 
                                                         </div>
@@ -129,9 +121,6 @@ function Manage_data() {
                                             </div>
                                         </div>
                                     </div>
-
-
-
                                 </div>{/* /content-panel */}
                             </div>{/* /col-md-12 */}
                         </div>
@@ -142,4 +131,4 @@ function Manage_data() {
     )
 }
 
-export default Manage_data
+export default Manage_contact

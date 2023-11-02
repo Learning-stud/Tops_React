@@ -23,6 +23,9 @@ function Header() {
                         <li className="nav-item">
                             <NavLink className="nav-link" to="/contact">Contact</NavLink>
                         </li>
+                        <li className="nav-item">
+                            <NavLink className="nav-link" to="/manage_contact">Manage Contact</NavLink>
+                        </li>
                     </ul>
                 </div>
             </nav>
