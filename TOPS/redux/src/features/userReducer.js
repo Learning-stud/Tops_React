@@ -2,7 +2,7 @@
 import axios from 'axios'
 
 const ALLDATA="ALLDATA";
-
+const SINGLEDATA="SINGLEDATA";
 
 const objectinia={
     alluser:[],
@@ -18,7 +18,15 @@ const userReducer=(state=objectinia,action)=>{
         return{
             ...state,
             alluser:action.payload
+        }   
+
+        case 'SINGLEDATA':
+        return{
+            ...state,
+            singleuser:action.payload
         }    
+      
+        
     }
 
     return state;
@@ -40,6 +48,18 @@ export const userfetch=()=>{
 
 
 
+
+const getsingledata=(data)=>({type:SINGLEDATA,payload:data})
+
+export const usersinglefetch=(id)=>{
+    return function(dispatch){
+        axios.get(`http://localhost:3000/user/${id}`)
+        .then((resp)=>{
+            dispatch(getsingledata(resp.data));
+        })
+    }
+}   
+
 export const insert=(api,object)=>{
     return function(){
         axios.post(api,object).
@@ -50,6 +70,13 @@ export const insert=(api,object)=>{
 export const deletedata=(api)=>{
     return function(){
         axios.delete(api).
+        then((resp)=> console.log(resp));
+    }
+}
+
+export const updatedata=(api,object)=>{
+    return function(){
+        axios.patch(api,object).
         then((resp)=> console.log(resp));
     }
 }
