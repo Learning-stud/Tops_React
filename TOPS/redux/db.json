@@ -1,43 +1,19 @@
 {
   "user": [
     {
-      "id": "1698743774621",
+      "id": "1698911943797",
       "name": "jay",
       "email": "jay@gmail.com",
-      "password": "123456",
-      "mobile": "1234567897"
-    },
-    {
-      "id": "1698743928540",
-      "name": "jay",
-      "email": "jay@gmail.com",
-      "password": "123456789",
-      "mobile": "1234567891"
-    },
-    {
-      "id": "1698744146517",
-      "name": "jay123",
-      "email": "jay@gmail.com",
-      "password": "123456789",
+      "password": "1234",
       "mobile": "1234567891"
     }
   ],
   "contact": [
     {
-      "id": 1,
-      "name": "dev"
-    },
-    {
-      "id": "1698743312370",
-      "name": "jay",
-      "email": "jay@gmail.com",
-      "message": "125478845165495"
-    },
-    {
-      "id": "1698743960883",
-      "name": "jay",
-      "email": "jay@gmail.com",
-      "message": "123456"
+      "id": "1698912228643",
+      "name": "jaygajjar",
+      "email": "jayahalpara123456@gmail.com",
+      "message": "thaiu gayu jo to \n"
     }
   ]
 }
