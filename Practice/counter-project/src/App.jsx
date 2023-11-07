@@ -1,19 +1,25 @@
 import "./App.css";
+import { useState } from "react";
 
 function App() {
-  let counter = 15;
-
+  const [counter, setCounter] = useState(0);
+  /*  For Addition */
   const addValue = () => {
-    console.log("clicked",Math.random );
-    counter = counter + 1
-  }
+    console.log("clicked", Math.random);
+    // counter = counter + 1;
+    setCounter(counter + 1);
+  };
+  /*  for SubStracTion  */
+  const minusValue = () => {
+    setCounter(counter - 1);
+  };
   return (
     <>
-      <h1> React </h1>
-      <h2>counter value : {counter}</h2>
+      <h1> COUNTER  </h1>
+      <h1>uounter value : {counter}</h1>
       <button onClick={addValue}> Add Value </button>
       <br />
-      <button> Remove Value </button>
+      <button onClick={minusValue}> Remove Value </button>
     </>
   );
 }
