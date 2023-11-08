@@ -1,4 +1,4 @@
-import  { useState } from "react";
+import { useState } from "react";
 
 function App() {
   const [color, setColor] = useState("olive");
@@ -6,7 +6,7 @@ function App() {
 
   const changeColor = (newColor) => {
     setColor(newColor);
-    setMessage("Color Changed to " + newColor);
+    setMessage("Areeeeeee Wahhhhhhh " + newColor);
   };
 
   return (
@@ -37,9 +37,25 @@ function App() {
             {" "}
             Blue{" "}
           </button>
+          <button
+            onClick={() => changeColor("orange")}
+            className="outline-none px-4 py-1 text-white shadow-xl bg-orange-500 rounded-md"
+          >
+            {" "}
+            orange{" "}
+          </button>
+          <button
+            onClick={() => changeColor("purple")}
+            className="outline-none px-4 py-1 text-white shadow-xl bg-purple-600 rounded-md"
+          >
+            {" "}
+            purple{" "}
+          </button>
         </div>
       </div>
-      <div className="  text-3xl text-slate-50  text-center justify-center pt-96 ">{message}</div>
+      <div className="  text-3xl text-slate-50  text-center justify-center pt-96 ">
+        {message}
+      </div>
     </div>
   );
 }
